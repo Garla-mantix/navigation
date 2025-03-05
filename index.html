@@ -9,17 +9,31 @@
     <title>Navigation bar</title>
 </head>
 <body>
-    <header class="header-container">
+    <header class="navigation">
         <a href="index.html"><img class="img__logo" src="images/LokomotivBabylon.png" alt="logo"></a>
-        <nav class="header-container__navbar">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <i class="fa-solid fa-bars"></i>
+        <div class="navbar" id="myNavbar">
+            <nav class="navbar__container">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="burgerMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </a>
     </header>
+    <script>
+        function burgerMenu() {
+          var x = document.getElementById("myNavbar");
+          if (x.className === "navbar__container") {
+            x.className += " responsive";
+          } else {
+            x.className = "navbar__container";
+          }
+        }
+        </script>
 </body>
 </html>
